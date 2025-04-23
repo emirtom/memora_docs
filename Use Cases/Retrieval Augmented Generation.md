@@ -19,22 +19,16 @@ Before we dive into creating our own RAG system, it’s important to understand 
 - **Enhanced Performance**: By retrieving only the most relevant information before generating a response, RAG reduces the burden on the generation model. This can lead to faster and more efficient responses, particularly when dealing with large datasets.
 
 ## How Does RAG Work? 
-// TODO add a picture and explain more
 
 ![RAG IMAGE](../assets/rag.png)
 
 
 Let’s explore how RAG functions in practice, step by step. We’ll look at how you can set up a basic RAG system using Memora to manage information retrieval effectively.
 
-### Get Your API Key and Create a Project
-
-TODO
-
-We will also be using OpenAI's Python SDK for this demo as we need an LLM model for the generation component. You can take a look at their [Quickstart](https://platform.openai.com/docs/quickstart) guide to get your OpenAI API key and its Python SDK.
 
 
 ### Create a Collection
-Memora uses collections to store data. We will create a simple collection with an additional field for storing the sentences. For more options in collection, you can check "API Ref". TODO
+Memora uses collections to store data. We will create a simple collection with an additional field for storing the sentences. For more options in collection, you can check the API reference. 
 
 ```python
 from memorapy import Memora
@@ -192,9 +186,5 @@ answer = openai_client.chat.completions.create(
 print(answer.choices[0].message.content)
 ```
     "Retrieval-Augmented Generation (RAG) works by integrating two key processes: information retrieval and text generation. This approach involves retrieving relevant information from a database or knowledge source and using that information to generate accurate and context-aware responses. By leveraging rapid access to external data alongside generative models, RAG can produce responses that are more informed and relevant to the user's query, enhancing the overall quality of the output."
-
-## Learn More
-
-// TODO
 
 

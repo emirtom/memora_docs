@@ -10,14 +10,11 @@ A recommendation system is a tool that helps suggest relevant content to users b
 
 
 ## How does Memora Fit In?
-// TODO add a picture of product, make them understand better
 To make accurate recommendations, you need to represent items and users in a way that a computer can understand and compare efficiently. This is where vector embeddings come in. Vector embeddings are numerical representations of data (e.g., movies, products, or even user behavior). The idea is to convert these items and users into vector embeddings that can be stored and searched efficiently using Memora.
 
-// TODO add vector embeddings link here
 
 Memora as vector database specialize in storing and retrieving high-dimensional vectors, making it easy to find the most similar items quickly. They are especially useful for applications like recommendation systems, where we need to search for similar items frequently and fast.
 
-// TODO add what is a vector database link here
 
 ## Step by Step Guide to Craeting a Recommendation System with Memora
 This guide will go step by step in creating a recommendation system using Memora. We will use the descriptions of movies for vectors and search for a similar movie among them. You can get Python SDK by using pip in command line:
@@ -25,10 +22,6 @@ This guide will go step by step in creating a recommendation system using Memora
 ```shell
 $ pip install memorapy
 ```
-
-### Get Your API Key and Create a Project
-
-TODO
 
 ### Create a Collection
 Memora uses collections to store data. We will create a simple collection with additional fields for storing the names and descriptions. For more options in collection, you can check "API Ref".
@@ -234,7 +227,6 @@ If you’re interested in diving deeper into other use cases and vector database
 
 - What is a vector database?
 - Vector Embeddings and how they work
-- RAG
+- Retrieval Augmented Generation
 
-// TODO add links to other doc and make this place richer
 

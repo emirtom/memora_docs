@@ -31,10 +31,6 @@ This guide will go step by step in creating a resource distribution system using
 $ pip install memorapy
 ```
 
-### Get Your API Key and Create a Project
-
-TODO
-
 ### Create a Collection
 Memora uses collections to store data. We will create a simple collection with an additional field to store the name of the place. Do note that the metric type is set to cosine similarity for this system. For more options in collection, you can check "API Ref".
 

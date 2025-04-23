@@ -15,7 +15,6 @@ When performing semantic search, the choice of database makes a big difference:
 ## Possible Usages of Semantic Search
 Semantic search isn’t just for product searches. Its applications are wide-ranging. For example:
 
-// TODO add more sentences here and explain more
 
 1. **Customer Support**: Semantic search can match users' questions with the most relevant help articles, even if they phrase their queries differently. This makes it easier for users to find solutions without needing to use specific keywords.
 2. **Medical Research**: Researchers can utilize semantic search to find studies or documents related to specific symptoms or treatments, even when the terminology varies. This helps connect information that might otherwise be overlooked.
@@ -29,10 +28,6 @@ This guide will go step by step in doing a simple semantic search inside Memora.
 ```shell
 $ pip install memorapy
 ```
-
-### Get Your API Key and Create a Project
-
-TODO
 
 ### Create a Collection
 Memora uses collections to store data. We will create a collection with an additional field for storing the sentences. We also need to add an index for the vector field as it can be seen. For more explanation and options in collection, you can check "API Ref".
@@ -163,5 +158,3 @@ If you’re interested in diving deeper into semantic search and vector database
 - What is a vector database?
 - Vector Embeddings and how they work
 - RAG and its use cases
-
-// TODO add links to other doc and make this place richer

@@ -17,10 +17,6 @@ To analyze and compare these patterns, we can transform the data into vectors an
 $ pip install memorapy
 ```
 
-### Get Your API Key and Create a Project
-
-TODO
-
 ### Create a Collection
 Memora uses collections to store data. We will create a collection with an additional field for storing the weeks. We also need to add an index for the vector field as it can be seen. For more explanation and options in collection, you can check "API Ref".
 

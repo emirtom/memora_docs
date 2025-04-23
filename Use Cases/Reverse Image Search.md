@@ -6,7 +6,6 @@ Image search is a technique that allows you to find images that are visually sim
 
 Traditional search engines work with text and keywords, but images are different. Images are made up of pixels, which are not directly searchable. To make image search possible, we need a way to convert images into a format that can be compared quickly and accurately. That’s where vector embeddings and Memora come in.
 
-// TODO add link of vector embeddings here
 
 ## How Does Image Search Work with Memora?
 Memora stores and retrieves data in the form of vectors. A vector is simply an array of numbers, and each image can be converted into a vector called vector embedding using a deep learning model called a neural network. This vector embedding represents the image’s features, like colors, shapes, and textures, in a way that can be mathematically compared with other vectors.
@@ -20,10 +19,6 @@ Here's how the process works:
 
 ## Step by Step Guide to Image Search in Memora
 Now, let’s walk through how you can build this system using Memora.
-
-### Get Your API Key and Create a Project
-
-TODO
 
 ### Create a Collection
 Memora uses collections to store data. We will create a simple collection with an additional field for storing the path for images. For more options in collection, you can check "API Ref".

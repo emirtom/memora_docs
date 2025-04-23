@@ -141,8 +141,4 @@ Finally we create the collection by passing the Collection object into the clien
 
 With this guide, you can set up a custom collection, including schema and index configurations, using Memora's Python SDK. Each element plays a crucial role in defining how your data is stored and accessed, making the process straightforward.
 
-Feel free to adjust these settings based on your data structure and search needs. You can learn more about Memora from:
-
-
-
-// TODO
+Feel free to adjust these settings based on your data structure and search needs.
