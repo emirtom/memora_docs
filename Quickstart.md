@@ -1,44 +1,33 @@
-# Quickstart with Gandi
+# Quickstart with Memora
 
-(Google Colab link)
 
 Vectors, the output data format of Neural Network models, can effectively encode information and serve a pivotal role in AI applications such as knowledge base, semantic search, Retrieval Augmented Generation (RAG) and more. 
 
-Gandi is a vector database cloud service that suits AI applications of every size from running a demo chatbot in Jupyter notebook to building web-scale search that serves billions of users. In this guide, we will walk you through how to get your API key and start using Gandi cloud.
-
-## Get Your API Key
-Login to website and create an account.
-
-(Website link)
+Memora is a vector database cloud service that suits AI applications of every size from running a demo chatbot in Jupyter notebook to building web-scale search that serves billions of users. In this guide, we will walk you through how to get your API key and start using Memora cloud.
 
 
-## Create Your Project
-
-TODO
-
-
-## Install Gandi
-In this guide we use Gandi's python library that lets you communicate with your database in cloud. Before starting, make sure you have Python 3.8+ available in the local environment. Install gandipy which contains python client library.
+## Install Memora
+In this guide we use Memora's python library that lets you communicate with your database in cloud. Before starting, make sure you have Python 3.8+ available in the local environment. Install memoradb which contains python client library.
 
 ```shell
-$ pip install -U gandipy
+$ pip install -U memoradb
 ```
 
 ## Set Up Vector Database
-To connect to Gandi cloud service, simply instantiate `Gandi` and put your API Key and your project ID into it. 
+To connect to Memora cloud service, simply instantiate `Memora` and put your API Key and your project ID into it. 
 
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 ```
 
 
 
 ## Create a Collection
-In Gandi, we need a collection to store vectors and their associated metadata. You can think of it as a table in traditional SQL databases. When creating a collection, you can define schema and index params to configure vector specs such as dimensionality, index types and distant metrics. There are also complex concepts to optimize the index for vector search performance. 
+In Memora, we need a collection to store vectors and their associated metadata. You can think of it as a table in traditional SQL databases. When creating a collection, you can define schema and index params to configure vector specs such as dimensionality, index types and distant metrics. There are also complex concepts to optimize the index for vector search performance. 
 
-For each request in Gandi, there is a request body needed that contains the necessary information. We can create and modify the body outside of the client and send it when we need. For a basic collection, we can create the Collection object with only its name and dimension.
+For each request in Memora, there is a request body needed that contains the necessary information. We can create and modify the body outside of the client and send it when we need. For a basic collection, we can create the Collection object with only its name and dimension.
 
 
 ```python
@@ -47,7 +36,7 @@ client.collection.create(collection=collection)
 ```
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/create" \
+curl --location --request POST "http://io.memora/collections/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -99,7 +88,7 @@ print(res)
 
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/insert" \
+curl --location --request POST "http://io.memora/vectors/insert" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -145,7 +134,7 @@ print(res)
 ```
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/search" \
+curl --location --request POST "http://io.memora/vectors/search" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -177,7 +166,7 @@ print(res)
 ```
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/query" \
+curl --location --request POST "http://io.memora/vectors/query" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -209,7 +198,7 @@ res = client.vectors.delete(
 print(res)
 ```
 ```shell
-curl --location --request POST "http://io.gandi/vectors/delete" \
+curl --location --request POST "http://io.memora/vectors/delete" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{

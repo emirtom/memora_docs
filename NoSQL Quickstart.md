@@ -1,37 +1,25 @@
 # Quickstart for a NoSQL Collection
 
-(Google Colab link)
 
-NoSQL (not only SQL) databases provide ways to store data in different ways than traditional relational databases. Gandi offers the option to create collections that act like a key-value type NoSQL database. This way you can store your non-vector data without using external services.
+NoSQL (not only SQL) databases provide ways to store data in different ways than traditional relational databases. Memora offers the option to create collections that act like a key-value type NoSQL database. This way you can store your non-vector data without using external services.
 
 This guide will help you through how to get your API key, create a project and create a NoSQL collection inside it. It will also go through simple operations such as adding, deleting and getting data from the database.
 
 
-## Get Your API Key
-Login to website and create an account.
-
-(Website link)
-
-
-## Create Your Project
-
-TODO
-
-
-## Install Gandi
-In this guide we use Gandi's python library that lets you communicate with your database in cloud. Before starting, make sure you have Python 3.8+ available in the local environment. Install gandipy which contains python client library.
+## Install Memora
+In this guide we use Memora's python library that lets you communicate with your database in cloud. Before starting, make sure you have Python 3.8+ available in the local environment. Install memoradb which contains python client library.
 
 ```shell
-$ pip install -U gandipy
+$ pip install -U memoradb
 ```
 
 ## Set Up NoSQL Database
-To connect to Gandi cloud service, simply instantiate `Gandi` and put your API Key and your project ID into it. 
+To connect to Memora cloud service, simply instantiate `Memora` and put your API Key and your project ID into it. 
 
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 ```
 
 ## Create a NoSQL Collection
@@ -39,7 +27,7 @@ client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 Each NoSQL collection has a primary key that will be the name of the key field in your key-value pairs. While creating your collection, you need to specify the primary key, your collection name and the fields that will hold your data.
 
 ```python
-from gandipy.models import Field
+from memoradb.models import Field
 
 if client.nosql.has_collection(collection_name="demo_collection"):
     client.nosql.drop_collection(collection_name="demo_collection")
@@ -51,7 +39,7 @@ client.nosql.create_collection(collection_name="demo_collection", primary_key="o
 ```
 
 ```shell
-curl --location --request POST "http://io.gandi/nosql/collections/create" \
+curl --location --request POST "http://io.memora/nosql/collections/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -86,7 +74,7 @@ client.nosql.insert(collection_name="demo_collection", data=objects)
 
 ```
 ```shell
-curl --location --request POST "http://io.gandi/nosql/data/insert" \
+curl --location --request POST "http://io.memora/nosql/data/insert" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -113,7 +101,7 @@ client.nosql.upsert(collection_name="demo_collection", data=objects)
 
 ```
 ```shell
-curl --location --request POST "http://io.gandi/nosql/data/upsert" \
+curl --location --request POST "http://io.memora/nosql/data/upsert" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -136,7 +124,7 @@ res = client.nosql.get(collection_name="demo_collection", key="A", output_fields
 print(res)
 ```
 ```shell
-curl --location --request POST "http://io.gandi/nosql/data/get" \
+curl --location --request POST "http://io.memora/nosql/data/get" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -157,7 +145,7 @@ res = client.nosql.get(collection_name="demo_collection", key="A")
 print(res)
 ```
 ```shell
-curl --location --request POST "http://io.gandi/nosql/data/delete" \
+curl --location --request POST "http://io.memora/nosql/data/delete" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{

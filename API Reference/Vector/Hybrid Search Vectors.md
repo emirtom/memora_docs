@@ -1,16 +1,14 @@
 # Hybrid Search Vectors
 
-POST: http://io.gandi/vectors/hybrid_search
+POST: http://io.memora/vectors/hybrid_search
 
 Make a vector similarity search with an optional scalar filtering.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/hybrid_search" \
+curl --location --request POST "http://io.memora/vectors/hybrid_search" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -29,10 +27,10 @@ curl --location --request POST "http://io.gandi/vectors/hybrid_search" \
 }'
 ```
 ```python
-from gandipy import Gandi
-from gandipy.models import Search, Ranker
+from memoradb import Memora
+from memoradb.models import Search, Ranker
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 search = Search(
     data=[0.3261097285092318, 0.03459258129290334, 0.723405829374921, 0.2981739029384014, 0.8756142981024957],

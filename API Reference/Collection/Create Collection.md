@@ -1,10 +1,8 @@
 # Create Collection
 
-POST: http://io.gandi/collections/create
+POST: http://io.memora/collections/create
 
 This operation creates a collection inside your database.
-
-## Authorization
 
 ## Example
 
@@ -12,7 +10,7 @@ You can create a collection quickly by only defining the collection name and dim
 The collection will be created with two fields which are primary and vector fields. They will have their default names as 'id' and 'vector', respectively.
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/create" \
+curl --location --request POST "http://io.memora/collections/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -22,10 +20,10 @@ curl --location --request POST "http://io.gandi/collections/create" \
 }'
 ```
 ```python
-from gandipy import Gandi
-from gandipy.models import Collection
+from memoradb import Memora
+from memoradb.models import Collection
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(collection_name="example_collection", dimension=5)
 

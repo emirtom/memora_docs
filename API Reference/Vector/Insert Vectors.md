@@ -1,16 +1,14 @@
 # Insert Vectors
 
-POST: http://io.gandi/vectors/insert
+POST: http://io.memora/vectors/insert
 
 Inserts data into a specific collection inside your project.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/insert" \
+curl --location --request POST "http://io.memora/vectors/insert" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -26,9 +24,9 @@ curl --location --request POST "http://io.gandi/vectors/insert" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 data = [
     {"id": 2, "vector": [0.4738293812938474, -0.5392104897310023, 0.15280321785604923, -0.3994873284928716, 0.7802341229482839]},
     {"id": 3, "vector": [0.2176392847101823, 0.08421475339820117, 0.6847123349783842, 0.243159675198483, 0.8129452185973021]},

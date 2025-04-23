@@ -1,16 +1,14 @@
 # Has Partition
 
-POST: http://io.gandi/partitions/has
+POST: http://io.memora/partitions/has
 
 Returns whether the given partition exist inside your collection.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/has" \
+curl --location --request POST "http://io.memora/partitions/has" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/partitions/has" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.has(collection_name="example_collection", partition_name="example_partition")
 ```

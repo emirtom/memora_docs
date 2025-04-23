@@ -2,9 +2,9 @@
 
 Vector databases use indexing to efficiently organize data and drastically reduce the time it takes in similarity searches. This way, large datasets can be queried much faster.
 
-Most of the indexes supported in Gandi use approximate nearest neighnors search (ANNS) algorithms. Rather than returning the exact requested result, which is not efficient, ANNS algorithms aim to sacrifice accuracy to drastically decrease the time it takes to search a dataset. The balance between time and accuracy is determined by the parameters of each algorithm.
+Most of the indexes supported in Memora use approximate nearest neighnors search (ANNS) algorithms. Rather than returning the exact requested result, which is not efficient, ANNS algorithms aim to sacrifice accuracy to drastically decrease the time it takes to search a dataset. The balance between time and accuracy is determined by the parameters of each algorithm.
 
-Gandi offers indexes for floating-point embeddings and binary embeddings. These indexes are stored in memory to be as efficient as possible. Another index called DiskANN offers the option to store the index in your hard disks in the cost of speed.
+Memora offers indexes for floating-point embeddings and binary embeddings. These indexes are stored in memory to be as efficient as possible. Another index called DiskANN offers the option to store the index in your hard disks in the cost of speed.
 
 ## Indexes for floating-point embeddings
 
@@ -152,7 +152,7 @@ The types of indexes include `SPARSE_INVERTED_INDEX` and `SPARSE_WAND`.
 
 For vector similarity search applications that require perfect accuracy and depend on relatively small (million-scale) datasets, the FLAT index is a good choice. FLAT does not compress vectors, and is the only index that can guarantee exact search results. Results from FLAT can also be used as a point of comparison for results produced by other indexes that have less than 100% recall.
 
-FLAT is accurate because it takes an exhaustive approach to search, which means for each query the target input is compared to every set of vectors in a dataset. This makes FLAT the slowest index on our list, and poorly suited for querying massive vector data. There are no parameters required for the FLAT index in Gandi, and using it does not need data training.
+FLAT is accurate because it takes an exhaustive approach to search, which means for each query the target input is compared to every set of vectors in a dataset. This makes FLAT the slowest index on our list, and poorly suited for querying massive vector data. There are no parameters required for the FLAT index in Memora, and using it does not need data training.
 
 - Search parameters
 
@@ -308,7 +308,7 @@ This index is exactly the same as FLAT except that this can only be used for bin
 
 For vector similarity search applications that require perfect accuracy and depend on relatively small (million-scale) datasets, the BIN_FLAT index is a good choice. BIN_FLAT does not compress vectors, and is the only index that can guarantee exact search results. Results from BIN_FLAT can also be used as a point of comparison for results produced by other indexes that have less than 100% recall.
 
-BIN_FLAT is accurate because it takes an exhaustive approach to search, which means for each query the target input is compared to vectors in a dataset. This makes BIN_FLAT the slowest index on our list, and poorly suited for querying massive vector data. There are no parameters for the BIN_FLAT index in Gandi, and using it does not require data training or additional storage.
+BIN_FLAT is accurate because it takes an exhaustive approach to search, which means for each query the target input is compared to vectors in a dataset. This makes BIN_FLAT the slowest index on our list, and poorly suited for querying massive vector data. There are no parameters for the BIN_FLAT index in Memora, and using it does not require data training or additional storage.
 
 - Search parameters
 

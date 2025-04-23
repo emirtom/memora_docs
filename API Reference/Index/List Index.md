@@ -1,16 +1,14 @@
 # List Indexes
 
-POST: http://io.gandi/indexes/list
+POST: http://io.memora/indexes/list
 
 Lists the indexes inside a specified collection.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/indexes/list" \
+curl --location --request POST "http://io.memora/indexes/list" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -29,9 +27,9 @@ curl --location --request POST "http://io.gandi/indexes/list" \
 }
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.indexes.list(collection_name="example_collection")
 ```

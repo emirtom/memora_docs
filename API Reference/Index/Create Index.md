@@ -1,15 +1,13 @@
 # Create Index
 
-POST: http://io.gandi/indexes/create
+POST: http://io.memora/indexes/create
 
 This operation creates an index for a vector field or a scalar field inside a specified collection.
-
-## Authorization
 
 ## Example
 
 ```shell
-curl --location --request POST "http://io.gandi/indexes/create" \
+curl --location --request POST "http://io.memora/indexes/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -30,10 +28,10 @@ curl --location --request POST "http://io.gandi/indexes/create" \
 }'
 ```
 ```python
-from gandipy import Gandi
-from gandipy.models import Index, IndexConfig
+from memoradb import Memora
+from memoradb.models import Index, IndexConfig
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 index = Index(
             metric_type="COSINE",

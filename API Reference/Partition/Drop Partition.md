@@ -1,16 +1,14 @@
 # Create Partition
 
-POST: http://io.gandi/partitions/drop
+POST: http://io.memora/partitions/drop
 
 Drops a specific partition inside your collection. Ensure that the partition is released before dropping.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/drop" \
+curl --location --request POST "http://io.memora/partitions/drop" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/partitions/drop" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.drop(collection_name="example_collection", partition_name="example_partition")
 ```

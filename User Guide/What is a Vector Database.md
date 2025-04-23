@@ -12,7 +12,7 @@ These vectors are useful because they allow computers to understand and compare 
 Traditional databases work well when you are looking for specific information in structured data (such as spreadsheets), but vector databases work with unstructured data and are optimized for similarity searches and approximate nearest neighbor searches, which are key operations while working with vectors. Its work process can be explained by the points below:
 
 - **Vector Storage**: Each piece of data called entity contains a vector. It often contains additional pieces of information such as labels or descriptions.
-- **Indexing**: To quickly search through large amounts of data, vector databases use special methods called indexing. Gandi uses a variety of Approximate Nearest Neighbor (ANN) algorithms for indexing such as Hierarchical Navigable Small World (HNSW) and Score-aware quantization loss.
+- **Indexing**: To quickly search through large amounts of data, vector databases use special methods called indexing. Memora uses a variety of Approximate Nearest Neighbor (ANN) algorithms for indexing such as Hierarchical Navigable Small World (HNSW) and Score-aware quantization loss.
 - **Similarity Metrics**: When comparing vectors, the database uses similarity measures—like figuring out how close or far apart two vectors are. Common ways to measure this include comparing angles (cosine similarity) or distances (Euclidean distance).
 
 

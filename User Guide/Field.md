@@ -1,5 +1,5 @@
 # Data Types
-Gandi supports different data types for vector, scalar and primary fields.
+Memora supports different data types for vector, scalar and primary fields.
 
 - Primary key field supports:
   - INT64: numpy.int64

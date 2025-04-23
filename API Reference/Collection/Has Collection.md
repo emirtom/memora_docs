@@ -1,16 +1,14 @@
 # Has Collection
 
-POST: http://io.gandi/collections/has
+POST: http://io.memora/collections/has
 
 Returns whether the given collection exist inside your project.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/has" \
+curl --location --request POST "http://io.memora/collections/has" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/collections/has" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.has(collection_name="example_collection")
 ```

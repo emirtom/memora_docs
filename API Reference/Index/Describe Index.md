@@ -1,15 +1,13 @@
 # Describe Index
 
-POST: http://io.gandi/indexes/describe
+POST: http://io.memora/indexes/describe
 
 This operation the given index inside your collection.
-
-## Authorization
 
 ## Example
 
 ```shell
-curl --location --request POST "http://io.gandi/indexes/describe" \
+curl --location --request POST "http://io.memora/indexes/describe" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/indexes/describe" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.indexes.describe(collection_name="example_collection", index_name="example_index")
 ```

@@ -1,16 +1,14 @@
 # Get Collection Load State
 
-POST: http://io.gandi/collections/get_load_state
+POST: http://io.memora/collections/get_load_state
 
 Returns the load state of the given collection inside your project.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/get_load_state" \
+curl --location --request POST "http://io.memora/collections/get_load_state" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/collections/get_load_state" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.get_load_state(collection_name="example_collection")
 ```

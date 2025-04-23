@@ -1,16 +1,14 @@
 # List Partitions
 
-POST: http://io.gandi/partitions/list
+POST: http://io.memora/partitions/list
 
 Returns the list of the partitions inside your collection.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/list" \
+curl --location --request POST "http://io.memora/partitions/list" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/partitions/list" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.list(project_id="YOUR_PROJECT_ID", collection_name="example_collection")
 ```

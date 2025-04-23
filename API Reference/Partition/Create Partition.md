@@ -1,16 +1,14 @@
 # Create Partition
 
-POST: http://io.gandi/partitions/create
+POST: http://io.memora/partitions/create
 
 Creates a new partition inside your collection.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/create" \
+curl --location --request POST "http://io.memora/partitions/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/partitions/create" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.create(collection_name="example_collection", partition_name="example_partition")
 ```

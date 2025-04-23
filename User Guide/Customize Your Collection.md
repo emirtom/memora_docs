@@ -4,17 +4,13 @@ This guide shows how to create a collection forwith customizations without needi
 Imagine you’re building a product recommendation system for an online store. You have a set of product embeddings (vector representations) and want to quickly find similar products based on a user's browsing history or preferences. Here's how to configure your collection for this purpose:
 
 
-## Get Your API Key and Python SDK
 
-// TODO
-
-
-## 1. Initialize the Gandi Client
+## 1. Initialize the Memora Client
 
 ```python
 
-from gandipy import Gandi
-from gandipy.models import (
+from memoradb import Memora
+from memoradb.models import (
     Collection, # Collection object to create
     Index, # Index object to define the parameters of the vector index
     Schema, # Schema is needed for further
@@ -24,11 +20,11 @@ from gandipy.models import (
 )
 
 
-client = Gandi(project_id="product_recommendations", api_key="YOUR_API_KEY")
+client = Memoraproject_id="product_recommendations", api_key="YOUR_API_KEY")
 
 ```
 
-**What It Does**: Sets up the Gandi client, which you'll use to interact with the Gandi API.
+**What It Does**: Sets up the Memora client, which you'll use to interact with the Memora API.
 
 **Parameters**:
  - ``project_id``: Your unique project identifier, here set to "product_recommendations".

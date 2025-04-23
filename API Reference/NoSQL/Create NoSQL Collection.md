@@ -1,17 +1,15 @@
 # Create NoSQL Collection
 
-POST: http://io.gandi/nosql/collections/create
+POST: http://io.memora/nosql/collections/create
 
 This operation creates a NoSQL collection inside your database.
-
-## Authorization
 
 ## Example
 
 You can specify your fields inside the schema or you can create a simple key value collection by specifying only a collection name and primary key.
 
 ```shell
-curl --location --request POST "http://io.gandi/nosql/collections/create" \
+curl --location --request POST "http://io.memora/nosql/collections/create" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/nosql/collections/create" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 
 result = client.nosql.create_collection(collection_name="example_collection", primary_key="key")

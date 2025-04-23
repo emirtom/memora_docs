@@ -1,16 +1,14 @@
 # Get Partition Statistics
 
-POST: http://io.gandi/partitions/get_stats
+POST: http://io.memora/partitions/get_stats
 
 Returns the number of rows in the given partition inside your collection.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/get_stats" \
+curl --location --request POST "http://io.memora/partitions/get_stats" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/partitions/get_stats" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.get_stats(collection_name="example_collection", partition_name="example_partition")
 ```

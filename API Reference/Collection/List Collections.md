@@ -1,16 +1,14 @@
 # List Collections
 
-POST: http://io.gandi/collections/list
+POST: http://io.memora/collections/list
 
 Returns the list of the collections inside your project.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/list" \
+curl --location --request POST "http://io.memora/collections/list" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -18,9 +16,9 @@ curl --location --request POST "http://io.gandi/collections/list" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.list()
 ```

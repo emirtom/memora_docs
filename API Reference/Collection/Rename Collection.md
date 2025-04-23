@@ -1,16 +1,14 @@
 # Drop Collection
 
-POST: http://io.gandi/collections/rename
+POST: http://io.memora/collections/rename
 
 Renames the given collection inside your project.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/rename" \
+curl --location --request POST "http://io.memora/collections/rename" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/collections/rename" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.rename(
     collection_name="example_collection",

@@ -1,16 +1,14 @@
 # Get Vectors
 
-POST: http://io.gandi/vectors/get
+POST: http://io.memora/vectors/get
 
 Gets specific vectors by their IDs.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/get" \
+curl --location --request POST "http://io.memora/vectors/get" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -20,9 +18,9 @@ curl --location --request POST "http://io.gandi/vectors/get" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.vectors.get(collection_name="example_collection", id=[1, 2, 3])
 ```

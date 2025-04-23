@@ -1,16 +1,14 @@
 # Release Collection
 
-POST: http://io.gandi/collections/drop
+POST: http://io.memora/collections/drop
 
 Releases the data inside the given collection from memory.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/release" \
+curl --location --request POST "http://io.memora/collections/release" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/collections/release" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.release(collection_name="example_collection")
 ```

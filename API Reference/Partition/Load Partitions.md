@@ -1,16 +1,14 @@
 # Load Partitions
 
-POST: http://io.gandi/partitions/load
+POST: http://io.memora/partitions/load
 
 Loads the data of the given partitions into memory.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/partitions/load" \
+curl --location --request POST "http://io.memora/partitions/load" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -23,9 +21,9 @@ curl --location --request POST "http://io.gandi/partitions/load" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.load(
             collection_name="example_collection",

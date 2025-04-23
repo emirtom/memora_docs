@@ -1,16 +1,14 @@
 # Search Vectors
 
-POST: http://io.gandi/vectors/search
+POST: http://io.memora/vectors/search
 
 Make a vector similarity search with an optional scalar filtering.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/vectors/search" \
+curl --location --request POST "http://io.memora/vectors/search" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -22,9 +20,9 @@ curl --location --request POST "http://io.gandi/vectors/search" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.vectors.insert(
             collection_name="example_collection",

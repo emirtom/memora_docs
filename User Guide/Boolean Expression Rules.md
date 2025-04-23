@@ -2,7 +2,7 @@
 
 ## Overview
 
-A predicate expression outputs a boolean value. Gandi gives the option to use the below rules for scalar filtering.
+A predicate expression outputs a boolean value. Memora gives the option to use the below rules for scalar filtering.
 
 [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) grammar rules describe boolean expressions rules:
 
@@ -164,7 +164,7 @@ Parentheses can be nested within expressions. Innermost parenthetical expression
 
 ## Usage
 
-Samples of all available boolean expression usage in Gandi are listed as follows (`int64` represents the scalar field that contains data of INT64 type,  `float` represents the scalar field that contains data of floating-point type, and `VARCHAR` represents the scalar field that contains data of VARCHAR  type):
+Samples of all available boolean expression usage in Memora are listed as follows (`int64` represents the scalar field that contains data of INT64 type,  `float` represents the scalar field that contains data of floating-point type, and `VARCHAR` represents the scalar field that contains data of VARCHAR  type):
 
 1. CmpOp
 

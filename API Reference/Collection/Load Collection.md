@@ -1,16 +1,14 @@
 # Load Collection
 
-POST: http://io.gandi/collections/load
+POST: http://io.memora/collections/load
 
 Loads the data of the given collection into memory.
-
-## Authorization
 
 ## Example
 
 
 ```shell
-curl --location --request POST "http://io.gandi/collections/load" \
+curl --location --request POST "http://io.memora/collections/load" \
 --header "Content-Type: application/json" \
 --header "Api-Key: $YOUR_API_KEY" \
 --data-raw '{
@@ -19,9 +17,9 @@ curl --location --request POST "http://io.gandi/collections/load" \
 }'
 ```
 ```python
-from gandipy import Gandi
+from memoradb import Memora
 
-client = Gandi(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.collections.load(collection_name="example_collection")
 ```
