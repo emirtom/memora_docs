@@ -24,7 +24,7 @@ Memora uses collections to store data. We will create a collection with an addit
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="time_series",
@@ -85,8 +85,6 @@ You can put these vectors inside your collection by:
 data = [
     {"vector": weekly_temperatures[i], "id": i, "week": f"week {i}" for i in range(24)}
 ]
-
-
 
 result = client.vectors.insert(collection_name="time_series", data=data)
 

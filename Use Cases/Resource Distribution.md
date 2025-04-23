@@ -38,7 +38,7 @@ Memora uses collections to store data. We will create a simple collection with a
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field, Index
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="resource_distributor",
@@ -98,15 +98,11 @@ places = [
     "Pinecrest"
 ]
 
-
-
-
 data = [{"vector": need_vectors[i], "id": i, "place": places[i]} for i in range(10)]
 
 result = client.vectors.insert(collection_name="resource_distrubitor", data=data)
 
 print(result)
-
 ```
     {'data': {'insertCount': 10, 'insertIds': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}}
 

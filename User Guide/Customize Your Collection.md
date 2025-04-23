@@ -8,7 +8,6 @@ Imagine you’re building a product recommendation system for an online store. Y
 ## 1. Initialize the Memora Client
 
 ```python
-
 from memoradb import Memora
 from memoradb.models import (
     Collection, # Collection object to create
@@ -19,9 +18,7 @@ from memoradb.models import (
     ElementTypeParams, 
 )
 
-
 client = Memora(project_id="product_recommendations", api_key="YOUR_API_KEY")
-
 ```
 
 **What It Does**: Sets up the Memora client, which you'll use to interact with the Memora API.
@@ -48,8 +45,6 @@ fields = [
     Field(field_name="category", data_type="VarChar"),
     Field(field_name="price", data_type="Float"),
 ]
-
-
 ```
 
 **What It Does**: Specifies the attributes that your collection will hold, along with their data types.
@@ -78,7 +73,6 @@ indexes = [
         params=IndexConfig(index_type="HNSW", ef_construction=200, m=16),
     )
 ]
-
 ```
 
 **What It Does**: Defines how data will be indexed and searched, using cosine similarity to compare product embeddings.
@@ -109,8 +103,6 @@ coll = Collection(
     schema=schema,
     indexes=indexes,
 )
-
-
 ```
 
 **What It Does**: Groups the fields into a schema, specifying the overall structure of your data. Uses that schema to create the collection object that combines everything we have created so far.
@@ -125,11 +117,9 @@ coll = Collection(
 
 
 ```python
-
 result = client.collections.create(collection=coll)
 
 print(result)
-
 ```
     {'message': 'collection created'}
 

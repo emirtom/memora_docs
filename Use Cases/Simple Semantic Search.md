@@ -36,7 +36,7 @@ Memora uses collections to store data. We will create a collection with an addit
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="rag",
@@ -131,7 +131,6 @@ Now that your data is in the collection, you can perform a search. Memora will f
 We will use an example sentence and try to find the most similar sentence in the collection. First, we need to convert into its embedding and use Search method to get the desired result. You can try different sentences and see the results for yourself.
 
 ```python
-
 query_sentence = "What is a famous historical structure in China?"
 
 query_vector = model.encode([query_sentence])
@@ -145,7 +144,6 @@ result = client.vectors.search(
     output_fields=["sentence"],  # fields that we want to get beside ID
     limit=1,  # number of top similar sentences to return
 )
-
 
 print(result)
 ```

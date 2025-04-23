@@ -55,7 +55,7 @@ from memorapy import Memora
 # Load the SQuAD dataset
 dataset = load_dataset("squad")
 
-client = Memora((project_id="YOUR_PROJECT", api_key="YOUR_API_KEY")
+client = Memora(project_id="YOUR_PROJECT", api_key="YOUR_API_KEY")
 
 model_name = "deepset/roberta-base-squad2"
 tokenizer = tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -106,8 +106,6 @@ for example in dataset["train"]:
     )
 
     id += 1
-
-
 ```
 
 ## Finetune the Model Using the Data Inside Memora
@@ -117,7 +115,6 @@ For training, we need to create ``TokenizedDataset`` class that takes a batch of
 ```python
 from torch.utils.data import Dataset
 import torch
-
 
 class TokenizedDataset(Dataset):
     def __init__(self, data):
@@ -139,14 +136,12 @@ class TokenizedDataset(Dataset):
             "start_positions": start_positions,
             "end_positions": end_positions,
         }
-
 ```
 
 We will use the below function to communicate with Memora as we get data in batches.
 
 
 ```python
-
 def fetch_batch(batch_size, offset):
     result = client.nosql.query(
         collection_name="finetuning_data",
@@ -160,8 +155,6 @@ def fetch_batch(batch_size, offset):
     )
 
     return result["data"]
-
-
 ```
 
 Now we can define the training arguments and start finetuning our model:
@@ -205,19 +198,14 @@ while True:
 
     # Update the offset for the next batch
     offset += batch_size
-
-
 ```
 
 Running the above code will result in a finetuned model for our specified needs. When the training is over, it is possible to save the model and the tokenizer to use in the future:
 
 ```python
-
 # Save the finetuned model
 model.save_pretrained("./finetuned-roberta-squad")
 tokenizer.save_pretrained("./finetuned-roberta-squad")
-
-
 ```
 
 

@@ -34,7 +34,7 @@ Memora uses collections to store data. We will create a simple collection with a
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="rag",
@@ -100,7 +100,6 @@ sentences = [
     "Integrating a vector database with an AI generation model allows for dynamic, real-time responses that are informed by a large dataset."
 ]
 
-
 embeddings = model.encode(sentences) # encode converts each sentence to its vector embedding by using jina model
 
 
@@ -109,7 +108,6 @@ print(embeddings.shape)
 You can add the sentences and their embeddings into the collection by using the Insert method.
 
 ```python
-
 embeddings = embeddings.tolist() # we need to convert the ndarray to list as they are not JSON serializable
 data = [
     {"id": i, "vector": embeddings[i], "sentence": sentences[i]}
@@ -138,7 +136,6 @@ result = client.vectors.search(
     output_fields=["sentence"], # fields that we want to get beside ID
     limit=3 # number of top similar sentences to return
 )
-
 
 print(result)
 

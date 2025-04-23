@@ -27,7 +27,7 @@ Memora uses collections to store data. We will create a simple collection with a
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="time_series",
@@ -79,22 +79,14 @@ processor = AutoImageProcessor.from_pretrained('facebook/dinov2-small')
 model = AutoModel.from_pretrained('facebook/dinov2-small')
 
 out = model(**inputs)
-
-
 ```
 
 
 
 ### Search for an Image
 
-
-
-
 ```python
-
-image_vec = 
-
-
+image_vec = [...]
 
 client.vector.search(
     collection_name="reverse_image_search",
@@ -106,10 +98,8 @@ client.vector.search(
 
 print(result)
 
-
 img = Image.open(result["data"]["image_path"])
 img.show()
-
 ```
 
 ## Learn More

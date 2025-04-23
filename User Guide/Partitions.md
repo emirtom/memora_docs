@@ -11,7 +11,6 @@ You can set a particular field in a collection as the partition key so that Memo
 Imagine you have a collection that holds objects with their color. Once you have set a partition key in color field, you can use it to filter your search as in the example:
 
 ```python
-
 vectors = [0.644686512685, -0.287321544653, -0.879712466324, -0.1297324308684, 0.943581347317]
 
 result = client.vectors.search(
@@ -22,5 +21,4 @@ result = client.vectors.search(
     output_fields=["id", "color_tag"],
     limit=3
 )
-
 ```

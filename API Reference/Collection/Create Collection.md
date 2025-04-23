@@ -23,7 +23,7 @@ curl --location --request POST "http://io.memora/collections/create" \
 from memoradb import Memora
 from memoradb.models import Collection
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(collection_name="example_collection", dimension=5)
 

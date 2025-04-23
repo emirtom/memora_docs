@@ -30,7 +30,7 @@ Memora uses collections to store data. We will create a simple collection with a
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="recommendation_system",
@@ -151,7 +151,6 @@ movies = [
     },
 ]
 
-
 embeddings = model.encode([movie["description"] for movie in movies]) # encode converts each description to its vector embedding by using jina model
 
 print(embeddings.shape)
@@ -161,7 +160,6 @@ print(embeddings.shape)
 You can add the names, descriptions and their embeddings into the collection by using the Insert method.
 
 ```python
-
 data = [
     {
         "id": i,
@@ -183,7 +181,6 @@ Now that your data is in the collection, you can perform a search. Memora will f
 We will use an example description and try to find the most similar sentence in the collection. First, we need to convert into its embedding and use Search method to get the desired result. You can try different descriptions and see the results for yourself.
 
 ```python
-
 query_desc = "an action movie"
 
 query_vector = model.encode([query_desc])
