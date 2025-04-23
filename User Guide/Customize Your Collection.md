@@ -20,7 +20,7 @@ from memoradb.models import (
 )
 
 
-client = Memoraproject_id="product_recommendations", api_key="YOUR_API_KEY")
+client = Memora(project_id="product_recommendations", api_key="YOUR_API_KEY")
 
 ```
 

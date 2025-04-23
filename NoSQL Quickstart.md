@@ -19,7 +19,7 @@ To connect to Memora cloud service, simply instantiate `Memora` and put your API
 ```python
 from memoradb import Memora
 
-client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 ```
 
 ## Create a NoSQL Collection

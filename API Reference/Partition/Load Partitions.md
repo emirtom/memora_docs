@@ -23,7 +23,7 @@ curl --location --request POST "http://io.memora/partitions/load" \
 ```python
 from memoradb import Memora
 
-client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 result = client.partitions.load(
             collection_name="example_collection",

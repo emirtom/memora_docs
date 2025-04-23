@@ -34,7 +34,7 @@ Memora uses collections to store data. We will create a simple collection with a
 from memorapy import Memora
 from memorapy.models import Collection, Schema, Field 
 
-client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora((api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 collection = Collection(
     collection_name="rag",

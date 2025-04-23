@@ -31,7 +31,7 @@ curl --location --request POST "http://io.memora/indexes/create" \
 from memoradb import Memora
 from memoradb.models import Index, IndexConfig
 
-client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 index = Index(
             metric_type="COSINE",

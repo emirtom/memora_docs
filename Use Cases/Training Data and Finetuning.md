@@ -55,7 +55,7 @@ from memorapy import Memora
 # Load the SQuAD dataset
 dataset = load_dataset("squad")
 
-client = Memora(project_id="YOUR_PROJECT", api_key="YOUR_API_KEY")
+client = Memora((project_id="YOUR_PROJECT", api_key="YOUR_API_KEY")
 
 model_name = "deepset/roberta-base-squad2"
 tokenizer = tokenizer = AutoTokenizer.from_pretrained(model_name)

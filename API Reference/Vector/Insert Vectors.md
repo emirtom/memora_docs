@@ -26,7 +26,7 @@ curl --location --request POST "http://io.memora/vectors/insert" \
 ```python
 from memoradb import Memora
 
-client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 data = [
     {"id": 2, "vector": [0.4738293812938474, -0.5392104897310023, 0.15280321785604923, -0.3994873284928716, 0.7802341229482839]},
     {"id": 3, "vector": [0.2176392847101823, 0.08421475339820117, 0.6847123349783842, 0.243159675198483, 0.8129452185973021]},

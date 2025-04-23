@@ -30,7 +30,7 @@ curl --location --request POST "http://io.memora/vectors/hybrid_search" \
 from memoradb import Memora
 from memoradb.models import Search, Ranker
 
-client = Memoraapi_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
+client = Memora(api_key="YOUR_API_KEY", project_id="YOUR_PROJECT_ID")
 
 search = Search(
     data=[0.3261097285092318, 0.03459258129290334, 0.723405829374921, 0.2981739029384014, 0.8756142981024957],
