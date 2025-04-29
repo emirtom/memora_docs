@@ -20,7 +20,7 @@ Before we dive into creating our own RAG system, it’s important to understand 
 
 ## How Does RAG Work? 
 
-![RAG IMAGE](../assets/rag.png)
+![RAG IMAGE](/assets/rag.png)
 
 
 Let’s explore how RAG functions in practice, step by step. We’ll look at how you can set up a basic RAG system using Memora to manage information retrieval effectively.
