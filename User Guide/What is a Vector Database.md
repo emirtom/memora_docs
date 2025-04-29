@@ -1,5 +1,5 @@
 # What is a Vector Database
-![Vector Database](../assets/vector_database.png)
+![Vector Database](/assets/vector_database.png)
 Vectors are like lists of numbers that capture important features of data, such as images, text, or sounds. A vector database is a special type of database that stores and searches information represented as vectors. 
 
 - An image can be represented as a vector based on its colors, shapes, or other details.
