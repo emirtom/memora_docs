@@ -19,7 +19,7 @@ Different kinds of information can be converted into vectors using special model
 3. **Text Embeddings**
    When it comes to words and sentences, models like Word2Vec and BERT turn text into numbers. These models work by looking at words that often appear together. Each embedding can be represented in the vector space and the relations between the words often become visible to eye. 
    
-   ![Vector embedding map](../assets/word2vec.png)
+   ![Vector embedding map](/assets/word2vec.png)
    
    As can you see in the picture, word "king" and "man" have a similar relation to the relation between "queen" and "woman". Other relations similar to that can also be seen. This helps computers understand the meaning and context behind the words, making it possible for applications like chatbots and translation services to function.
 
